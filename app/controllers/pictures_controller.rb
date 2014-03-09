@@ -43,6 +43,7 @@ class PicturesController < ApplicationController
 	  image_in_question = EXIFR::JPEG.new("#{Rails.root}/public/#{url}")
 
 	  object.update_attributes(
+	  	path: image_in_question("#{Rails.root}/public/#{url}")
 	    latitude: image_in_question.gps.latitude, 
 	    longitude: image_in_question.gps.longitude, 
 	    date_time_original: image_in_question.date_time_original,
