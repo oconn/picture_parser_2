@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140309024205) do
     t.string   "picture_image_content_type"
     t.integer  "picture_image_file_size"
     t.datetime "picture_image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
