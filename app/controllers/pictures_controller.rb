@@ -8,9 +8,9 @@ class PicturesController < ApplicationController
     @picture = Picture.new(picture_params)
 
     if @picture.save
-
+      redirect_to "/"
     else
-
+      render "new"
     end
 	end
 
@@ -38,6 +38,6 @@ class PicturesController < ApplicationController
 	private
 
 	def picture_params
-    
+    params.require(:picture).permit(:picture_images)
 	end
 end
