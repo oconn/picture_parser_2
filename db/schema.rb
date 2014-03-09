@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140309024205) do
 
   create_table "pictures", force: true do |t|
     t.string   "path"
+    t.integer  "user_id"
     t.float    "latitude"
     t.float    "longitude"
     t.text     "date_time_original"

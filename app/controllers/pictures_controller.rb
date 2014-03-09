@@ -20,7 +20,7 @@ class PicturesController < ApplicationController
 	end
 
 	def index
-    @pictures = Pictures.all
+    @pictures = Picture.all
 	end
 
 	def edit
@@ -43,13 +43,13 @@ class PicturesController < ApplicationController
 	  image_in_question = EXIFR::JPEG.new("#{Rails.root}/public/#{url}")
 
 	  object.update_attributes(
-	  	path: image_in_question("#{Rails.root}/public/#{url}")
+	  	path: ("/public#{url}"),
 	    latitude: image_in_question.gps.latitude, 
 	    longitude: image_in_question.gps.longitude, 
 	    date_time_original: image_in_question.date_time_original,
 	    date_time: image_in_question.date_time,
-	    gps_date_stamp: image_in_question.gps_date_stamp)
-
+	    gps_date_stamp: image_in_question.gps_date_stamp,
+      user_id: current_user.id)
 	end
 
 	def picture_params
