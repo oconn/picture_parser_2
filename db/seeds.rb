@@ -7,6 +7,8 @@ Dir.foreach('app/assets/images') do |photo|
 
     if image_in_question.gps == nil
       Picture.create(
+        latitude: "42.05322",   
+        longitude: "-87.84644",
         path: "app/assets/images/#{photo}",
         date_time_original: image_in_question.date_time_original,
         date_time: image_in_question.date_time)
