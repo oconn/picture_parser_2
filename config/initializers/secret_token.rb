@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Hackathon2::Application.config.secret_key_base = 'c20b57102ad2ce7733a95d5f81802674fa71db92847605133903e0838c7c60886ade4f830caf54c7d148d4ded991309de481ab68726e2b7d03353a0ef47486ed'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+Hackathon2::Application.config.secret_key_base = secure_token
