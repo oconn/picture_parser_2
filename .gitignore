@@ -19,6 +19,6 @@
 .devise_secret
 
 
-config/database.yml
 .DS_Store
 app/assets/.DS_Store
+config/database.yml
