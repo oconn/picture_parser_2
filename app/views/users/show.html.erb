@@ -2,6 +2,8 @@
 
 <%= link_to "Add Pictures", new_picture_path, class: "btn btn-primary" %>
 
+
+
 <script type="text/javascript">
   function initialize() {
     var myLatlng = new google.maps.LatLng(42.018977, -87.802839);
@@ -13,7 +15,8 @@
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    
+    var pics = <%= @picture %>
+    console.log(pics)
 
     // var latitudes = $('.latitude');
     // var longitudes = $('.longitude');
@@ -31,7 +34,7 @@
 
     })
 
-    var contentString = '<%= image_tag("funniest_fox.jpg")%>'
+    var contentString = '<%= image_tag("2009-10-24 12.24.34.jpg", size: 300) %>'
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString,
@@ -55,7 +58,7 @@
     // }  
   };
 
-    
-
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+
+<div id="map-canvas" style="height: 500px; width: 80%"></div>

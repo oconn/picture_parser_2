@@ -51,7 +51,8 @@ class PicturesController < ApplicationController
 	    longitude: image_in_question.gps.longitude, 
 	    date_time_original: image_in_question.date_time_original,
 	    date_time: image_in_question.date_time,
-	    gps_date_stamp: image_in_question.gps_date_stamp)
+	    gps_date_stamp: image_in_question.gps_date_stamp,
+      user_id: current_user.id)
 
 	end
 
