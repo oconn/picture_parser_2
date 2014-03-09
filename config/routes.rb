@@ -1,8 +1,11 @@
 Hackathon2::Application.routes.draw do
+  get '/users/pictures' => 'users#pictures'
   devise_for :users
   root 'static_pages#index'
   resources :users, only: [:show] 
   resources :pictures
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
