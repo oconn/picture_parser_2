@@ -17,3 +17,6 @@
 
 .secret
 .devise_secret
+.DS_Store
+config/database.yml
+
