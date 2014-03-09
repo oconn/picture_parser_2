@@ -4,7 +4,6 @@ class CreatePictures < ActiveRecord::Migration
       t.string :path
       t.float :latitude
       t.float :longitude
-      # t.text :orientation
       t.text :date_time_original
       t.text :date_time
       t.text :gps_date_stamp
