@@ -1,5 +1,3 @@
-
-
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -25,6 +23,8 @@ ActiveRecord::Schema.define(version: 20140309014554) do
     t.text     "date_time_original"
     t.text     "date_time"
     t.text     "gps_date_stamp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
@@ -46,4 +46,3 @@ ActiveRecord::Schema.define(version: 20140309014554) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
-

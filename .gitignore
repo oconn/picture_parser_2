@@ -17,3 +17,5 @@
 
 .secret
 .devise_secret
+
+config/database.yml
