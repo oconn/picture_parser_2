@@ -39,12 +39,8 @@ class PicturesController < ApplicationController
 	private
 
 	def parse_picture(url, object)
-		puts url
-		puts object
 	  # unless url[-4..-1] != ".JPG" && url[-4..-1] != ".jpg"
 	  image_in_question = EXIFR::JPEG.new("#{Rails.root}/public/#{url}")
-
-	  puts image_in_question
 
 	  object.update_attributes(
 	    latitude: image_in_question.gps.latitude, 
