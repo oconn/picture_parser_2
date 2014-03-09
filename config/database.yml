@@ -4,7 +4,11 @@ development:
   database: picture_parser_dev
   pool: 5
   timeout: 5000
-  username: Matt
+<<<<<<< HEAD
+  username:
+=======
+  username: alextsveta2012
+>>>>>>> 6ef513d6525c7e2abf98b9037f5d29b57f6b7438
   password:
 
 test:
@@ -12,7 +16,11 @@ test:
   database: picture_parser_test
   pool: 5
   timeout: 5000
-  username: Matt
+<<<<<<< HEAD
+  username:
+=======
+  username: alextsveta2012
+>>>>>>> 6ef513d6525c7e2abf98b9037f5d29b57f6b7438
   password:
 
 production:
