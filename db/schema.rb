@@ -1,3 +1,5 @@
+
+
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,17 +13,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
 ActiveRecord::Schema.define(version: 20140309014554) do
->>>>>>> 31876336c7ed3a44e1ed8b47e2bb0608a2af3c1f
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-=======
+  create_table "pictures", force: true do |t|
+    t.string   "path"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "date_time_original"
+    t.text     "date_time"
+    t.text     "gps_date_stamp"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -40,5 +45,5 @@ ActiveRecord::Schema.define(version: 20140309014554) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
->>>>>>> 31876336c7ed3a44e1ed8b47e2bb0608a2af3c1f
 end
+
